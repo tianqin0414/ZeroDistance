@@ -5,7 +5,8 @@
 
 import React from 'react';
 
-import { AuthLoadingRouter } from './routers/AuthLoading';
+// import { AuthLoadingRouter } from './routers/AuthLoading';
+import { AuthLoadingRouter } from './initialTQ/index';
 import {View} from 'react-native';
 import {Toast} from './components';
 import {observer, Provider} from 'mobx-react';
@@ -32,9 +33,10 @@ export default class index extends React.Component<any> {
 
 		return (
 			<Provider {...RootStore}>
-				<View style={{backgroundColor: 'transparent', flex: 1}}>
+				{/*<View style={{backgroundColor: 'transparent', flex: 1}}>*/}
+				<View>
 					<AuthLoadingRouter />
-					<Toast ref={(t: any) => this.toast = t}/>
+					{/*<Toast ref={(t: any) => this.toast = t}/>*/}
 				</View>
 			</Provider>
 		);
